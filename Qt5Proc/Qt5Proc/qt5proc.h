@@ -14,6 +14,9 @@ public:
 
 private:
 	Ui::Qt5ProcClass ui;
+
+public slots:
+	void on_pushButton_clicked();
 };
 
 #endif // QT5PROC_H
