@@ -21,18 +21,10 @@ Qt5Proc::~Qt5Proc()
 void Qt5Proc::on_pushButton_clicked()
 {
 	try {
-		//Erase previous message queue
 		message_queue::remove("message_queue");
+		int siz = sizeof(int);
+		message_queue mq (create_only, "message_queue", 100, sizeof(int));
 
-		//Create a message_queue.
-		message_queue mq
-		(create_only               //only create
-			, "message_queue"           //name
-			, 100                       //max message number
-			, sizeof(int)               //max message size
-		);
-
-		//Send 100 numbers
 		for (int i = 0; i < 100; ++i) {
 			mq.send(&i, sizeof(i), 0);
 		}

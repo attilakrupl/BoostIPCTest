@@ -12,6 +12,9 @@ public:
 	Qt4Proc(QWidget *parent = 0, Qt::WFlags flags = 0);
 	~Qt4Proc();
 
+public slots:
+	void onDataSent(int);
+
 private:
 	Ui::Qt4ProcClass ui;
 };
