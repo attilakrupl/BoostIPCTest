@@ -105,3 +105,4 @@ ipch/
 *.psess
 *.vsp
 *.vspx
+*.opendb
